@@ -56,9 +56,6 @@ const App = () => {
 
     // Find the closest data points
     const years = Object.keys(wageData).map(Number).sort((a, b) => a - b);
-    let closestYear = years.reduce((prev, curr) => 
-      Math.abs(curr - year) < Math.abs(prev - year) ? curr : prev
-    );
 
     // Calculate ages for different life stages (treating birth year as work age)
     const age18Year = year;
